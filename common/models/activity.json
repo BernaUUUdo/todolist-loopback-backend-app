@@ -1,0 +1,38 @@
+{
+  "name": "Activity",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "createDateTime": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "limitDateTime": {
+      "type": "date"
+    },
+    "alertDateTime": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "list": {
+      "type": "belongsTo",
+      "model": "List",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

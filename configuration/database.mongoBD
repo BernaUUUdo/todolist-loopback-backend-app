@@ -1,0 +1,9 @@
+
+use todo
+db.createUser(
+   {
+     user: "todo",
+     pwd: "todo",
+     roles: [ ]
+   }
+)
